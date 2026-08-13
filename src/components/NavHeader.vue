@@ -46,6 +46,7 @@ header {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  filter: brightness(900%);
 }
 .listing-wrapper {
   width: 70px;
