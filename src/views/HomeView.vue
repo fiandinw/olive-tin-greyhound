@@ -21,6 +21,7 @@
         </div>
       </div>
     </div>
+
     <div class="unggulan-container">
       <div class="unggulan-layout">
         <div>
@@ -35,6 +36,33 @@
         </div>
         <div class="unggulan-image-container">
           <img src="https://picsum.photos/1020" alt="deskripsi-perusahaan" />
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <div class="item-container">
+        <div class="item-background-image-container">
+          <div class="item-background-image">
+            <img src="https://picsum.photos/1010" alt="Item Image" />
+          </div>
+          <div class="item-title">Item</div>
+        </div>
+      </div>
+      <div class="item-container">
+        <div class="item-background-image-container">
+          <div class="item-background-image">
+            <img src="https://picsum.photos/1010" alt="Item Image" />
+          </div>
+          <div class="item-title">Item</div>
+        </div>
+      </div>
+      <div class="item-container">
+        <div class="item-background-image-container">
+          <div class="item-background-image">
+            <img src="https://picsum.photos/1010" alt="Item Image" />
+          </div>
+          <div class="item-title">Item</div>
         </div>
       </div>
     </div>
@@ -128,5 +156,55 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.items {
+  width: 100%;
+  position: relative;
+}
+
+.item-container {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-width: 500px;
+  position: relative;
+  padding: 1em;
+}
+
+.item-background-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.item-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.item-background-image img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(75%);
+}
+
+.item-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 1em;
+
+  font-weight: bold;
+  color: white;
+  font-size: 1.25rem;
+
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
 }
 </style>
