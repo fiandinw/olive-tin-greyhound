@@ -16,7 +16,9 @@
             </div>
           </div>
           <div class="banner-content-layout-row">
-            <button><i class="bi bi-whatsapp"></i> Hubungi Kami</button>
+            <a href="mailto:trimagnasinergimakmur@gmail.com">
+              <button><i class="bi bi-envelope"></i> Hubungi Kami</button>
+            </a>
           </div>
         </div>
       </div>
@@ -44,27 +46,39 @@
       <div class="item-container">
         <div class="item-background-image-container">
           <div class="item-background-image">
-            <img src="https://picsum.photos/1010" alt="Item Image" />
+            <img src="@/assets/projecta.jpeg" alt="Item Image" />
           </div>
-          <div class="item-title">Item</div>
+          <div class="item-title">Project</div>
         </div>
       </div>
       <div class="item-container">
         <div class="item-background-image-container">
           <div class="item-background-image">
-            <img src="https://picsum.photos/1010" alt="Item Image" />
+            <img src="@/assets/projectb.jpeg" alt="Item Image" />
           </div>
-          <div class="item-title">Item</div>
+          <div class="item-title">Project</div>
         </div>
       </div>
       <div class="item-container">
         <div class="item-background-image-container">
           <div class="item-background-image">
-            <img src="https://picsum.photos/1010" alt="Item Image" />
+            <img src="@/assets/projectc.jpeg" alt="Item Image" />
           </div>
-          <div class="item-title">Item</div>
+          <div class="item-title">Project</div>
         </div>
       </div>
+    </div>
+
+    <div class="maps">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.5746457518453!2d107.16725199999999!3d-6.3194669999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699b0de98f0dad%3A0x2e2356c1967fc0ed!2sJl.%20Anoa%202%20No.112%2C%20RT.2%2FRW.8%2C%20Jayamukti%2C%20Kec.%20Cikarang%20Pusat%2C%20Kabupaten%20Bekasi%2C%20Jawa%20Barat%2017530!5e0!3m2!1sen!2sid!4v1786932549238!5m2!1sen!2sid"
+        width="400"
+        height="300"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+      ></iframe>
     </div>
   </main>
 </template>
@@ -114,10 +128,12 @@
 }
 
 .banner-content-layout-row button {
-  background-color: #25d366;
+  background-color: red;
   border: none;
   border-radius: 8px;
   padding: 0.75em 1.25em;
+
+  color: white;
 
   display: flex;
   align-items: center;
@@ -206,5 +222,13 @@
   font-size: 1.25rem;
 
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+.maps {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 </style>

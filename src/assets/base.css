@@ -62,6 +62,18 @@ body {
   font-family: 'Mulish', sans-serif;
 }
 
+/* remove anchor styling */
+/*
+Source - https://stackoverflow.com/a/8919740
+Posted by Freyja, modified by community. See post 'Timeline' for change history
+Retrieved 2026-08-17, License - CC BY-SA 3.0
+*/
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
 /* body {
   min-height: 100vh;
   color: var(--color-text);

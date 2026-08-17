@@ -1,6 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import NavHeader from './components/NavHeader.vue'
+import NavFooter from './components/NavFooter.vue'
 </script>
 
 <template>
@@ -18,6 +19,7 @@ import NavHeader from './components/NavHeader.vue'
   </header> -->
   <NavHeader />
   <RouterView />
+  <NavFooter />
 </template>
 
 <style scoped>
