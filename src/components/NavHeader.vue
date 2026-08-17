@@ -39,7 +39,7 @@ const closeMenu = () => {
             <a href="#beranda" class="menu-item" @click.prevent>Beranda</a>
             <a href="#produk-tsm" class="menu-item">Produk TSM</a>
             <a href="#" class="menu-item" @click.prevent>Tentang TSM</a>
-            <a href="#" class="menu-item" @click.prevent>Keunggulan TSM</a>
+            <a href="#keunggulan-tsm" class="menu-item" @click.prevent>Keunggulan TSM</a>
             <a href="#kontak" class="menu-item">Kontak</a>
           </nav>
         </Transition>

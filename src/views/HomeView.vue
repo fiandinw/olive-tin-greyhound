@@ -92,6 +92,79 @@ const mailtoHref = computed(() => {
       </div>
     </div>
 
+    <div id="keunggulan-tsm" class="keunggulan-section">
+      <div class="keunggulan-header">
+        <h2>Mengapa Memilih Trimagna?</h2>
+      </div>
+      <div class="keunggulan-grid">
+        <div class="keunggulan-card">
+          <div class="keunggulan-icon">
+            <i class="bi bi-chat-left-text"></i>
+          </div>
+          <h3>Layanan Terbaik</h3>
+          <p>
+            Konsultasikan kebutuhan proyek Anda untuk mendapatkan rekomendasi terbaik dari tim
+            profesional kami.
+          </p>
+        </div>
+
+        <div class="keunggulan-card">
+          <div class="keunggulan-icon">
+            <i class="bi bi-box-seam"></i>
+          </div>
+          <h3>Produk Lengkap</h3>
+          <p>
+            Trimagna menyediakan beragam produk besi dan baja lengkap untuk memenuhi semua kebutuhan
+            proyek Anda.
+          </p>
+        </div>
+
+        <div class="keunggulan-card">
+          <div class="keunggulan-icon">
+            <i class="bi bi-shield-check"></i>
+          </div>
+          <h3>Produk Berkualitas</h3>
+          <p>
+            Semua produk kami telah memenuhi Standar Nasional Indonesia (SNI) dengan kualitas
+            terjamin.
+          </p>
+        </div>
+
+        <div class="keunggulan-card">
+          <div class="keunggulan-icon">
+            <i class="bi bi-telephone"></i>
+          </div>
+          <h3>Pembelian Super Mudah</h3>
+          <p>
+            Hubungi kami melalui WhatsApp atau email, tanpa perlu repot datang ke toko. Kami siap
+            melayani Anda.
+          </p>
+        </div>
+
+        <div class="keunggulan-card">
+          <div class="keunggulan-icon">
+            <i class="bi bi-tag"></i>
+          </div>
+          <h3>Harga Kompetitif</h3>
+          <p>
+            Kami menyediakan harga yang kompetitif dan dapat disesuaikan dengan kebutuhan dan budget
+            proyek Anda.
+          </p>
+        </div>
+
+        <div class="keunggulan-card">
+          <div class="keunggulan-icon">
+            <i class="bi bi-truck"></i>
+          </div>
+          <h3>Pengiriman Cepat</h3>
+          <p>
+            Melayani pengiriman ke seluruh Indonesia dengan sistem yang efisien dan dapat
+            diandalkan.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <div class="maps">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.5746457518453!2d107.16725199999999!3d-6.3194669999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699b0de98f0dad%3A0x2e2356c1967fc0ed!2sJl.%20Anoa%202%20No.112%2C%20RT.2%2FRW.8%2C%20Jayamukti%2C%20Kec.%20Cikarang%20Pusat%2C%20Kabupaten%20Bekasi%2C%20Jawa%20Barat%2017530!5e0!3m2!1sen!2sid!4v1786932549238!5m2!1sen!2sid"
@@ -290,6 +363,69 @@ const mailtoHref = computed(() => {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+}
+
+.keunggulan-section {
+  width: 100%;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+}
+
+.keunggulan-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.keunggulan-header h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  color: #111827;
+  margin: 0;
+  font-weight: 700;
+}
+
+.keunggulan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.keunggulan-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border-top: 4px solid #dc2626;
+}
+
+.keunggulan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.keunggulan-icon {
+  font-size: 2.5rem;
+  color: #dc2626;
+  margin-bottom: 1rem;
+}
+
+.keunggulan-card h3 {
+  font-size: 1.25rem;
+  color: #111827;
+  margin: 0.5rem 0 1rem;
+  font-weight: 600;
+}
+
+.keunggulan-card p {
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
 }
 
 .contact-form-section {
