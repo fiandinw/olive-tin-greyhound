@@ -74,6 +74,10 @@ a {
   text-decoration: inherit; /* no underline */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* body {
   min-height: 100vh;
   color: var(--color-text);

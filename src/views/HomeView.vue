@@ -2,7 +2,7 @@
 
 <template>
   <main>
-    <div class="banner-container">
+    <div id="beranda" class="banner-container">
       <div class="banner-image-background">
         <img src="https://picsum.photos/1000" alt="banner" />
       </div>
@@ -42,7 +42,7 @@
       </div>
     </div>
 
-    <div class="items">
+    <div id="produk-tsm" class="items">
       <div class="item-container">
         <div class="item-background-image-container">
           <div class="item-background-image">
