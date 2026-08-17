@@ -1,4 +1,27 @@
-<script setup></script>
+<script setup>
+import { computed, ref } from 'vue'
+
+const nama = ref('')
+const noTelp = ref('')
+const kebutuhan = ref('')
+
+const mailtoHref = computed(() => {
+  const subject = encodeURIComponent(
+    `Permintaan dari ${nama.value || 'Customer'}${noTelp.value ? ` (${noTelp.value})` : ''}`,
+  )
+
+  const body = encodeURIComponent(
+    [
+      `Nama: ${nama.value || '-'}`,
+      `No Telp: ${noTelp.value || '-'}`,
+      'Deskripsi Kebutuhan:',
+      kebutuhan.value || '-',
+    ].join('\n'),
+  )
+
+  return `mailto:trimagnasinergimakmur@gmail.com?subject=${subject}&body=${body}`
+})
+</script>
 
 <template>
   <main>
@@ -80,6 +103,43 @@
         referrerpolicy="strict-origin-when-cross-origin"
       ></iframe>
     </div>
+
+    <section id="kontak" class="contact-form-section">
+      <div class="contact-form-card">
+        <div class="contact-form-header">
+          <h2>Kirim Kebutuhan Anda</h2>
+          <p>
+            Isi detail kebutuhan proyek Anda, lalu klik tombol di bawah untuk mengirim via email.
+          </p>
+        </div>
+
+        <div class="contact-form">
+          <label class="contact-field">
+            <span>Nama</span>
+            <input v-model="nama" type="text" placeholder="Masukkan nama Anda" />
+          </label>
+
+          <label class="contact-field">
+            <span>No Telp</span>
+            <input v-model="noTelp" type="tel" placeholder="Masukkan nomor telepon" />
+          </label>
+
+          <label class="contact-field">
+            <span>Deskripsi Kebutuhan</span>
+            <textarea
+              v-model="kebutuhan"
+              rows="5"
+              placeholder="Jelaskan kebutuhan proyek atau produk yang Anda cari"
+            ></textarea>
+          </label>
+        </div>
+
+        <a :href="mailtoHref" class="mailto-button">
+          <i class="bi bi-envelope"></i>
+          Kirim via Email
+        </a>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -230,5 +290,109 @@
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+}
+
+.contact-form-section {
+  width: 100%;
+  padding: 2rem 1rem 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form-card {
+  width: min(720px, 100%);
+  background: #fff;
+  border: 1px solid #f1f1f1;
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+
+.contact-form-header {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form-header h2 {
+  margin: 0 0 0.5rem;
+  color: #111827;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.contact-form-header p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.contact-field {
+  display: grid;
+  gap: 0.5rem;
+  color: #111827;
+  font-weight: 600;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  font: inherit;
+  color: #111827;
+  background: #fff;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+.contact-field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.mailto-button {
+  margin-top: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.9rem 1.25rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 16px 28px rgba(220, 38, 38, 0.18);
+}
+
+.mailto-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 30px rgba(220, 38, 38, 0.22);
+}
+
+.mailto-button i {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 640px) {
+  .contact-form-card {
+    padding: 1.25rem;
+  }
 }
 </style>
